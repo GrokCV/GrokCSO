@@ -117,7 +117,7 @@ class ISTANet(BaseModel):
       loss_constraint = torch.mean(torch.pow(layers_sym[0], 2))
       for k in range(8):
         loss_constraint += torch.mean(torch.pow(layers_sym[k + 1], 2))
-      gamma = torch.Tensor([0.01])
+      gamma = torch.Tensor([0.01]).to(device)
       loss_all = loss_discrepancy + torch.mul(gamma, loss_constraint)
       print(loss_all)
       optim_wrapper.update_params(loss_all)
