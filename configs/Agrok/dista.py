@@ -1,8 +1,8 @@
 _base_ = '../_base_/datasets/img_dataset.py'
 
 
-Phi_data_Name = '/data1/dym/GrokCSO-Dev/data/sampling_matrix/a_phi_0_3.mat'
-Qinit_Name = '/data1/dym/GrokCSO-Dev/data/initial_matrix/Q_3.mat'
+Phi_data_Name = 'phi.mat'
+Qinit_Name = Q.mat'
 
 block = "DIST_BasicBlock"
 
