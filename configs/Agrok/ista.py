@@ -1,0 +1,21 @@
+"""
+  Description:
+    detector: ISTA
+    basic_block: BasicBlock
+"""
+
+_base_ = '../_base_/datasets/img_dataset.py'
+
+Phi_data_Name = 'phi_3.mat'
+Qinit_Name = 'Q_3.mat'
+
+block = "BasicBlock"
+
+model = dict(
+  type="FDFrameWork",
+  LayerNo=9,
+  Phi_data_Name=Phi_data_Name,
+  Qinit_Name=Qinit_Name,
+  block=block
+)
+
