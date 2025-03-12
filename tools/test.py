@@ -58,7 +58,7 @@ def parse_args():
         '--launcher',
         choices=['none', 'pytorch', 'slurm', 'mpi'],
         default='none',
-        help='job launcher 工作启动器，用来启动分布式训练')
+        help='job launcher')
     parser.add_argument('--tta', action='store_true')
     # When using PyTorch version >= 2.0.0, the `torch.distributed.launch`
     # will pass the `--local-rank` parameter to `tools/train.py` instead
