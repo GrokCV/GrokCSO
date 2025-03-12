@@ -1,7 +1,7 @@
 _base_ = '_base_/img_dataset.py'
 
-Phi_data_Name = 'phi_5.mat'
-Q_init_Name = 'Q_5.mat'
+Phi_data_Name = 'phi_5.mat'  # replace with the path to phi_5.mat
+Q_init_Name = 'Q_5.mat'  # replace with the path to Q_5.mat
 
 block = "BasicBlock"
 

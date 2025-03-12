@@ -7,12 +7,10 @@ import scipy.io as sio
 from mmengine.model import BaseModel
 from typing import Dict, Union
 from tools.utils import read_targets_from_xml_list
-
-
-device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-
 import torch
 import torch.nn as nn
+
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 
 def shrink_free(input_, theta_):

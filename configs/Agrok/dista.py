@@ -1,8 +1,8 @@
 _base_ = '../_base_/datasets/img_dataset.py'
 
 
-Phi_data_Name = 'phi_3.mat'
-Qinit_Name = 'Q_3.mat'
+Phi_data_Name = 'phi_3.mat'  # replace with the path to a_phi_0_3.mat
+Qinit_Name = 'Q_3.mat'  # replace with the path to Q_3.mat
 
 block = "DIST_BasicBlock"
 
@@ -12,5 +12,5 @@ model = dict(
   Phi_data_Name=Phi_data_Name,
   Qinit_Name=Qinit_Name,
   block=block,
-  lambda_weight=0.5,
+  lambda_weight=0.7,
 )

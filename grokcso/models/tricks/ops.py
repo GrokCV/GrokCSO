@@ -81,10 +81,10 @@ class _UpsampleBlock(nn.Module):
 
         self.body = nn.Sequential(*modules)
 
-
     def forward(self, x):
         out = self.body(x)
         return out
+
 
 class BasicConv2d(nn.Module):
     def __init__(self, wn, in_planes, out_planes, kernel_size, stride, padding=0):
@@ -101,7 +101,7 @@ class BasicConv2d(nn.Module):
         return x
 
 
-#Frequency Enhancement (FE) Operation
+# Frequency Enhancement (FE) Operation
 class FE(nn.Module):
     def __init__(self,
                  wn, in_channels, channels):
@@ -122,7 +122,8 @@ class FE(nn.Module):
 
         return out
 
-#Frequency-based Enhancement Block (FEB)
+
+# Frequency-based Enhancement Block (FEB)
 class FEB(nn.Module):
     def __init__(self,
                  wn, in_channels, out_channels):
@@ -135,15 +136,14 @@ class FEB(nn.Module):
         self.HConv = FE(wn, 32, 32)
         self.conv = wn(nn.Conv2d(channels*2, in_channels, kernel_size=1, bias=False))
 
-
     def forward(self, x):
-        #Low-Frequency Path
+        # Low-Frequency Path
         path_1 = self.path_1(x)
         path_1 = self.relu(path_1)
         path_1 = self.k1(path_1)
         path_1  = self.relu(path_1)
 
-        #High-Frequency Path
+        # High-Frequency Path
         path_2 = self.path_2(x)
         path_2 = self.relu(path_2)
         path_2 = self.HConv(path_2)

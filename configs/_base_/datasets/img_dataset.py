@@ -1,8 +1,8 @@
 dataset_type = 'NoiseDataset'
 
-train_data_root = 'train'
-val_data_root = 'val'
-test_data_root = 'test'
+train_data_root = 'train'  # Path: data\train
+val_data_root = 'val'  # Path: data\val
+test_data_root = 'test'   # Path: data\test
 
 train_dataloader = dict(
   batch_size=64,
