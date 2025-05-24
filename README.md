@@ -5,11 +5,13 @@
 ---
 
 ## The network
+![net](./pictures/dista-net.png)
 ---
 Architecture of the proposed DISTA-Net. The overall framework consists of multiple cascaded stages. Each stage contains three main components: a dual-branch dynamic transform module ($\mathcal{F}^{(k)}$) for feature extraction, a dynamic threshold module ($\Theta^{(k)}$) for feature refinement, and an inverse transform module ($\tilde{\mathcal{F}}^{(k)}$) for reconstruction.
 
 
 ## Comparison with state-of-the-art methods
+![copmare](./pictures/compare.png)
 ---
 
 | Method    |   #P    | FLOPs  | CSO-mAP | AP-05 | AP-05 | AP-05 | AP-05 | AP-05 | PSNR  | SSIM  |
