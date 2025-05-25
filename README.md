@@ -16,7 +16,7 @@ A synthetic dataset for multi-target sub-pixel resolution analysis under diffrac
 | Targets per Image   | 1–5 (random)             |
 | Intensity Range     | 220–250 units (uniform)  |
 | Spatial Constraints | Sub-pixel coordinates within a pixel + 0.52 Rayleigh unit separation |
-| Train : Validation :Test | 80000:10000:10000 |
+| Train : Validation : Test | 80000 : 10000 : 10000 |
 
 ## The network
 ![net](./pictures/dista-net.png)
