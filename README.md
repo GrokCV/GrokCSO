@@ -1,8 +1,22 @@
-# DISTA-Net
+## 📘 Introduction
+An open-source ecosystem for the unmixing of closely-spaced infrared small targets including:
+- **CSIST-100K**, a publicly available benchmark dataset; 
+- **CSO-mAP**, a custom evaluation metric for sub-pixel detection; 
+- **GrokCSO**, an open-source toolkit featuring DISTA-Net and other models.
 ---
 
-## Visualized demos for DISTA-Net
----
+## 🗂 CSIST-100K Dataset
+A synthetic dataset for multi-target sub-pixel resolution analysis under diffraction-limited conditions.
+### Simulation Parameters
+
+| Parameter           | Value/Range              |
+|---------------------|--------------------------|
+| Imaging Size        | 11×11 pixels             |
+| $σ_{PSF}$           | 0.5 pixel                |
+| Targets per Image   | 1–5 (random)             |
+| Intensity Range     | 220–250 units (uniform)  |
+| Spatial Constraints | Sub-pixel coordinates within a pixel + 0.52 Rayleigh unit separation |
+| Train : Validation :Test | 80000:10000:10000 |
 
 ## The network
 ![net](./pictures/dista-net.png)
