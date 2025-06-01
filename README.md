@@ -143,3 +143,14 @@ $ CUDA_VISIBLE_DEVICES=1 python tools/test.py --config configs/c_5/dista.py --ch
 # c = 7  
 $ CUDA_VISIBLE_DEVICES=1 python tools/test.py --config configs/c_7/dista.py --checkpoint /pth/dista/c_7/epoch_246.pth --work-dir work_dir/dista/c_7
 ```
+
+### 🎁Citation
+```
+@article{han2025dista,
+  title={DISTA-Net: Dynamic Closely-Spaced Infrared Small Target Unmixing},
+  author={Han, Shengdong and Yang, Shangdong and Zhang, Xin and Li, Yuxuan and Li, Xiang and Yang, Jian and Cheng, Ming-Ming and Dai, Yimian},
+  journal={arXiv preprint arXiv:2505.19148},
+  year={2025}
+}
+```
+
