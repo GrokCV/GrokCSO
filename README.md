@@ -58,7 +58,7 @@ Architecture of the proposed DISTA-Net. The overall framework consists of multip
 #### Installation
 ```shell
 $ conda create --name grokcso python=3.9 
-$ source activate zoomir
+$ source activate grokcso
 ```
 #### Step 1: Install PyTorch
 
