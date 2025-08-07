@@ -5,6 +5,12 @@ An open-source ecosystem for the unmixing of closely-spaced infrared small targe
 - **GrokCSO**, an open-source toolkit featuring DISTA-Net and other models.
 ---
 
+## Chinese Resources 🇨🇳 📚
+
+- 📄 [Chinese Paper Translation: ](https://1drv.ms/b/c/698f69b8b2172561/ETFPfi9IRSVHrZczWRnZ11ABQJA0ZpXm5AyDF0y00eu4rA?e=gBPWnU) - OneDrive
+- 📝 [Chinese Article Explanation](https://mp.weixin.qq.com/s/TCqu9ZSJRJXtyHNzKagOvA) - Wechat
+- 📺 [Chinese Video Tutorial](https://www.bilibili.com/video/BV1d8tPzxESh/) - Bilibili
+
 ## 🗂 CSIST-100K Dataset
 A synthetic dataset for multi-target sub-pixel resolution analysis under diffraction-limited conditions. Download: [Baidu Pan](https://pan.baidu.com/s/1nuedV5Okng8rgFWKy_sMoA?pwd=Grok) / [OneDrive](https://1drv.ms/f/c/698f69b8b2172561/EnQbsEb_rXpJlsNXinWyBbsBkhCsnSPM7UEgtczt7FDjmQ).
 ### Simulation Parameters
