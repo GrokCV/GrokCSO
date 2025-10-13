@@ -9,25 +9,6 @@ import xml.etree.ElementTree as ET
 import xml.dom.minidom as minidom
 
 
-# Calculate the magnitude response of a pixel
-def diffusion(x, y, target_x, target_y, ai, sigma):
-  """The diffusion function uses a Gaussian function"""
-  return ai * (1 / (2 * np.pi * sigma ** 2)) * np.exp(-((x - target_x) ** 2
-                                + (y - target_y) ** 2) / (2 * sigma ** 2))
-
-
-# Calculate the magnitude response of a pixel
-def calculate_pixel_response(pixel_x, pixel_y, target_info, sigma):
-  """Calculate pixel gray value"""
-  response = 0.0
-  for target in target_info:
-    target_x, target_y, ai = target
-    response += dblquad(diffusion, pixel_x - 1 / 2, pixel_x + 1 / 2,
-                        lambda y: pixel_y - 1 / 2, lambda y: pixel_y + 1 / 2,
-                        args=(target_x, target_y, ai, sigma))[0]
-  return response
-
-
 def save_image(k, image, location="data/test_image_folder/cso_img"):
   image_output_location = os.path.join(location, f"image_{k}.png")
   cv2.imwrite(image_output_location, image)
@@ -39,22 +20,6 @@ def save_image1(k, image, location="data/test_image_folder/cso_img"):
   plt.imshow(image, cmap='gray')
   plt.savefig(image_output_location, bbox_inches='tight', pad_inches=0,
               dpi=600)
-
-
-def create_image(width, height, target_info, sigma, noise_mean=35000, noise_std=5):
-  image0 = np.zeros((width, height))
-  for xi in range(0, width):
-    for yi in range(0, height):
-      pixel_response = calculate_pixel_response(xi, yi, target_info, sigma)
-      image0[yi, xi] = pixel_response
-  if noise_mean == 0 and noise_std == 0:
-    return image0
-  else:
-    background = \
-      np.random.normal(loc=noise_mean, scale=noise_std, size=(11, 11))
-    background = np.clip(background, 34985, 35015)
-    image0 = (image0 + background)
-    return image0
 
 
 def xml_2_matrix_single(xml_file, c=3, is_mat=False):
