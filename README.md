@@ -75,6 +75,7 @@ conda install pytorch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 pytorch-cuda=
 #### Step 2: Install OpenMMLab 2.x Codebases
 
 ```shell
+$ pip install -U openmim
 $ pip install mmcv==2.1.0 -f https://download.openmmlab.com/mmcv/dist/cu121/torch2.1/index.html
 
 $ pip install mmdet
