@@ -3,7 +3,7 @@
   <tr>
     <td width="9999" bgcolor="#F5F5F5" style="padding: 25px; border-radius: 12px; border: 1px solid #E0E0E0;">
       <div align="center">
-        <h2 style="color: #333; margin-bottom: 15px;">📚 Related Resources</h2>
+        <h2 style="color: #333; margin-bottom: 15px;">🔬 Related Resources</h2>
         <p style="font-size: 1.1em; color: #666; margin-bottom: 20px;">
           This work is part of our research on<br>
           <b>Closely-Spaced Infrared Small Target Unmixing</b><br>
