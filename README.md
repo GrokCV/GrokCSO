@@ -13,6 +13,42 @@
   </tr>
 </table>
 
+<table>
+  <tr>
+    <td width="9999" bgcolor="#F5F5F5" style="padding: 25px; border-radius: 12px; border: 1px solid #E0E0E0;">
+      <div align="center">
+        <h2 style="color: #333; margin-bottom: 15px;">🔬 Research Context</h2>
+        <p style="font-size: 1.1em; color: #666; margin-bottom: 20px;">
+          This implementation is part of our comprehensive study on<br>
+          <b>Closely-Spaced Infrared Small Target Unmixing</b>
+        </p>
+        <a href="https://github.com/GrokCV/Awesome-CSIST-Unmixing" 
+           style="background: linear-gradient(45deg, #FF6B6B, #4ECDC4); 
+                  color: white; 
+                  padding: 12px 30px; 
+                  border-radius: 25px; 
+                  text-decoration: none; 
+                  font-weight: bold;
+                  font-size: 1.1em;">
+          📚 View Awesome Collection
+        </a>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td width="9999" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 15px; text-align: center;">
+      <h2>🚀 Explore More Resources</h2>
+      <p style="font-size: 1.1em; margin: 15px 0;">Check out our comprehensive collection for Closely-Spaced Infrared Small Target Unmixing</p>
+      <a href="https://github.com/GrokCV/Awesome-CSIST-Unmixing" style="color: white; font-size: 1.3em; font-weight: bold; text-decoration: underline;">
+        📖 Awesome CSIST Unmixing Collection
+      </a>
+    </td>
+  </tr>
+</table>
+
 
 ## 📘 Introduction
 An open-source ecosystem for the unmixing of closely-spaced infrared small targets including:
