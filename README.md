@@ -1,3 +1,18 @@
+<table>
+  <tr>
+    <td width="9999" bgcolor="#FFF3CD" style="padding: 20px; border-radius: 10px;">
+      <h3>📚 Related Resources</h3>
+      <p>This work is part of our research on <b>Closely-Spaced Infrared Small Target Unmixing</b>. 
+      For a comprehensive collection of papers, datasets, and resources, visit:</p>
+      <p align="center">
+        <a href="https://github.com/GrokCV/Awesome-CSIST-Unmixing" style="font-size: 1.2em; font-weight: bold;">
+          🌟 Awesome Closely-Spaced Infrared Small Target Unmixing
+        </a>
+      </p>
+    </td>
+  </tr>
+</table>
+
 > 🔥 **Related Resources**: Check out our curated collection of papers and resources for Closely-Spaced Infrared Small Target Unmixing at **[Awesome CSIST Unmixing](https://github.com/GrokCV/Awesome-CSIST-Unmixing)** 📚
 
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/GrokCV/Awesome-CSIST-Unmixing)
