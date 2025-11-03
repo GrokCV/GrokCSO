@@ -13,9 +13,6 @@
   </tr>
 </table>
 
-> 🔥 **Related Resources**: Check out our curated collection of papers and resources for Closely-Spaced Infrared Small Target Unmixing at **[Awesome CSIST Unmixing](https://github.com/GrokCV/Awesome-CSIST-Unmixing)** 📚
-
-[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/GrokCV/Awesome-CSIST-Unmixing)
 
 ## 📘 Introduction
 An open-source ecosystem for the unmixing of closely-spaced infrared small targets including:
