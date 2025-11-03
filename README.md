@@ -1,17 +1,3 @@
-<table>
-  <tr>
-    <td width="9999" bgcolor="#FFF3CD" style="padding: 20px; border-radius: 10px;">
-      <h3>📚 Related Resources</h3>
-      <p>This work is part of our research on <b>Closely-Spaced Infrared Small Target Unmixing</b>. 
-      For a comprehensive collection of papers, datasets, and resources, visit:</p>
-      <p align="center">
-        <a href="https://github.com/GrokCV/Awesome-CSIST-Unmixing" style="font-size: 1.2em; font-weight: bold;">
-          🌟 Awesome Closely-Spaced Infrared Small Target Unmixing
-        </a>
-      </p>
-    </td>
-  </tr>
-</table>
 
 <table>
   <tr>
@@ -19,8 +5,9 @@
       <div align="center">
         <h2 style="color: #333; margin-bottom: 15px;">🔬 Research Context</h2>
         <p style="font-size: 1.1em; color: #666; margin-bottom: 20px;">
-          This implementation is part of our comprehensive study on<br>
+          This work is part of our research on
           <b>Closely-Spaced Infrared Small Target Unmixing</b>
+      For a comprehensive collection of papers, datasets, and resources, visit:
         </p>
         <a href="https://github.com/GrokCV/Awesome-CSIST-Unmixing" 
            style="background: linear-gradient(45deg, #FF6B6B, #4ECDC4); 
@@ -30,21 +17,9 @@
                   text-decoration: none; 
                   font-weight: bold;
                   font-size: 1.1em;">
-          📚 View Awesome Collection
+          📚 View Awesome-CSIST-Unmixing
         </a>
       </div>
-    </td>
-  </tr>
-</table>
-
-<table>
-  <tr>
-    <td width="9999" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 15px; text-align: center;">
-      <h2>🚀 Explore More Resources</h2>
-      <p style="font-size: 1.1em; margin: 15px 0;">Check out our comprehensive collection for Closely-Spaced Infrared Small Target Unmixing</p>
-      <a href="https://github.com/GrokCV/Awesome-CSIST-Unmixing" style="color: white; font-size: 1.3em; font-weight: bold; text-decoration: underline;">
-        📖 Awesome CSIST Unmixing Collection
-      </a>
     </td>
   </tr>
 </table>
