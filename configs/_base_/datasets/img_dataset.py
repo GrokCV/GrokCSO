@@ -74,7 +74,7 @@ default_hooks = dict(
     checkpoint=dict(
         type='CheckpointHook',
         interval=1,             
-        save_best='cso_metric/mAP',       # <--- 在这里！
+        save_best='cso_metric/mAP',       
         rule='greater',         
         max_keep_ckpts=1
     ),
