@@ -61,6 +61,22 @@ val_evaluator = [
   dict(
     type="CSO_Metrics",
     brightness_threshold=50,
-    c=3)
+    c=3),
+  dict(
+    type="Similarity",
+    c=3
+  )
 ]
+
 test_evaluator = val_evaluator
+
+default_hooks = dict(
+    checkpoint=dict(
+        type='CheckpointHook',
+        interval=1,             
+        save_best='cso_metric/mAP',       # <--- 在这里！
+        rule='greater',         
+        max_keep_ckpts=1
+    ),
+    # ---------------------------------
+)
