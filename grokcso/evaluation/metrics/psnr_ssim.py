@@ -25,12 +25,12 @@ class Similarity(BaseMetric):
 
   def process(self, data_batch: dict, outputs) -> None:
     output = outputs[0]
-    x_output = output['x_final'].cpu().numpy()  # 获取网络输出，并转为 numpy 格式
-    ann_list = output['img_gt'].cpu().numpy()  # 获取真实标注
+    x_output = output['x_final'].cpu().numpy()  
+    ann_list = output['img_gt'].cpu().numpy()  
     for idx in range(x_output.shape[0]):
       pred_img = x_output[idx].reshape(11*self.c, 11*self.c)
       gt_img = ann_list[idx].reshape(11*self.c, 11*self.c)
-      # 计算psnr和ssim
+      
       psnr = self.psnr(pred_img, gt_img)
       ssim = self.ssim(pred_img, gt_img)
       self.results.append([psnr, ssim])
@@ -42,7 +42,7 @@ class Similarity(BaseMetric):
     eval_results = OrderedDict()
     eval_results['PSNR'] = np.mean(psnrs)
     eval_results['SSIM'] = np.mean(ssims)
-    # 平均精度
+    
     print_log(f'Avg_PSNR: {eval_results["PSNR"]:.4f}--------Avg_SSIM:'
               f'{eval_results["SSIM"]:.4f}', logger)
     return eval_results
