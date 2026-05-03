@@ -180,11 +180,19 @@ $ CUDA_VISIBLE_DEVICES=1 python tools/test.py --config configs/c_7/dista.py --ch
 
 ### 🎁Citation
 ```
-@article{han2025dista,
-  title={DISTA-Net: Dynamic Closely-Spaced Infrared Small Target Unmixing},
-  author={Han, Shengdong and Yang, Shangdong and Zhang, Xin and Li, Yuxuan and Li, Xiang and Yang, Jian and Cheng, Ming-Ming and Dai, Yimian},
-  journal={arXiv preprint arXiv:2505.19148},
+@inproceedings{han2025dista,
+  title={DISTA-Net: Dynamic closely-spaced infrared small target unmixing},
+  author={Han, Shengdong and Yang, Shangdong and Li, Yuxuan and Zhang, Xin and Li, Xiang and Yang, Jian and Cheng, Ming-Ming and Dai, Yimian},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={14655--14664},
   year={2025}
+}
+@article{zhai2025seqcsist,
+  title={Seqcsist: Sequential closely-spaced infrared small target unmixing},
+  author={Zhai, Ximeng and Xu, Bohan and Chen, Yaohong and Wang, Hao and Guo, Kehua and Dai, Yimian},
+  journal={IEEE Transactions on Geoscience and Remote Sensing},
+  year={2025},
+  publisher={IEEE}
 }
 ```
 
