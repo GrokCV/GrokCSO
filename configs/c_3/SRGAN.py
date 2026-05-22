@@ -50,13 +50,6 @@ optim_wrapper = dict(
         optimizer=dict(type='Adam', lr=1e-4, betas=(0.9, 0.999))),
 )
 
-val_evaluator = dict(
-  type="CSO_Metrics",
-)
-test_evaluator = dict(
-  type="CSO_Metrics"
-)
-
 train_cfg = dict(
     by_epoch=True,
     max_epochs=1000,

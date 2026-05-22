@@ -13,19 +13,6 @@ model = dict(
   channel=32, 
 )
 
-optim_wrapper = dict(
-    type='OptimWrapper',
-    optimizer=dict(
-        type='Adam', lr=0.0001, weight_decay=1e-5)
-    )
-
-val_evaluator = dict(
-  type="CSO_Metrics",
-)
-test_evaluator = dict(
-  type="CSO_Metrics"
-)
-
 train_cfg = dict(
     by_epoch=True,
     max_epochs=100,

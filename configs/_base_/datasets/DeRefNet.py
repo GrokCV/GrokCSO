@@ -63,3 +63,28 @@ train_cfg = dict(
 
 val_cfg = dict()
 test_cfg = dict()
+
+optim_wrapper = dict(
+    type='OptimWrapper',
+    optimizer=dict(
+        type='Adam', lr=0.0001, weight_decay=1e-5)
+    )
+
+val_evaluator = dict(
+  type="CSO_Metrics"
+)
+test_evaluator = dict(
+  type="CSO_Metrics"
+)
+
+# default_hooks = dict(
+#   visualization=dict(type='CSOVisualizationHook', draw=True, c=3,
+#                      image_name="SRCNN")
+# )
+
+default_hooks = dict(
+  checkpoint=dict(
+    type='CheckpointHook',
+    interval=-1,
+    _scope_='mmdet',
+    save_best='auto'))

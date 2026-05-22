@@ -8,21 +8,6 @@ model = dict(
   type='ESPCN'
 )
 
-optim_wrapper = dict(
-    type='OptimWrapper',
-    optimizer=dict(
-        type='Adam', lr=0.0001, weight_decay=1e-5)
-    )
-
-val_evaluator = dict(
-  type="CSO_Metrics",
-  # type="SINR_DET_RATE"
-)
-test_evaluator = dict(
-  type="CSO_Metrics"
-  # type="SINR_DET_RATE"
-)
-
 train_cfg = dict(
     by_epoch=True,
     max_epochs=100,

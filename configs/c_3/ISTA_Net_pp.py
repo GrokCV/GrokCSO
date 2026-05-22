@@ -9,19 +9,6 @@ model = dict(
   LayerNo=20
 )
 
-optim_wrapper = dict(
-    type='OptimWrapper',
-    optimizer=dict(
-        type='Adam', lr=0.0001)
-    )
-
-val_evaluator = dict(
-  type="CSO_Metrics",
-)
-test_evaluator = dict(
-  type="CSO_Metrics"
-)
-
 train_cfg = dict(
     by_epoch=True,
     max_epochs=100,

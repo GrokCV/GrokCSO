@@ -50,12 +50,6 @@ optim_wrapper = dict(
         optimizer=dict(type='Adam', lr=1e-4, betas=(0.9, 0.999))),
 )
 
-val_evaluator = dict(
-  type="CSO_Metrics",
-)
-test_evaluator = dict(
-  type="CSO_Metrics"
-)
 
 train_cfg = dict(
     by_epoch=True,
@@ -64,14 +58,3 @@ train_cfg = dict(
     )
 val_cfg = dict()
 test_cfg = dict()
-
-# default_hooks = dict(
-#   visualization=dict(type='CSOVisualizationHook', draw=True, c=3,
-#                      image_name="DeRefNet")
-# )
-default_hooks = dict(
-  checkpoint=dict(
-    type='CheckpointHook',
-    interval=-1,
-    _scope_='mmdet',
-    save_best='auto'))

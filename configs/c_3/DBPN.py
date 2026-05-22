@@ -14,14 +14,6 @@ optim_wrapper = dict(
         type='Adam', lr=0.0001, weight_decay=1e-5)
     )
 
-val_evaluator = dict(
-  type="CSO_Metrics",
-  # type="SINR_DET_RATE"
-)
-test_evaluator = dict(
-  type="CSO_Metrics"
-  # type="SINR_DET_RATE"
-)
 
 train_cfg = dict(
     by_epoch=True,
@@ -31,13 +23,13 @@ train_cfg = dict(
 val_cfg = dict()
 test_cfg = dict()
 
-default_hooks = dict(
-  visualization=dict(type='CSOVisualizationHook', draw=True, c=3,
-                     image_name="DBPN")
-)
 # default_hooks = dict(
-#   checkpoint=dict(
-#     type='CheckpointHook',
-#     interval=-1,
-#     _scope_='mmdet',
-#     save_best='auto'))
+#   visualization=dict(type='CSOVisualizationHook', draw=True, c=3,
+#                      image_name="DBPN")
+# )
+default_hooks = dict(
+  checkpoint=dict(
+    type='CheckpointHook',
+    interval=-1,
+    _scope_='mmdet',
+    save_best='auto'))
