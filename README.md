@@ -5,7 +5,7 @@
       <div align="center">
         <h2 style="color: #333; margin-bottom: 15px;">🔬 Related Resources</h2>
         <p style="font-size: 1.1em; color: #666; margin-bottom: 20px;">
-          This work is part of our research on<br>
+          These work are parts of our research on<br>
           <b>Closely-Spaced Infrared Small Target Unmixing</b><br>
       For a comprehensive collection of papers, datasets, and resources, visit:
         </p>
