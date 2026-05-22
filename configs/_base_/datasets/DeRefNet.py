@@ -71,10 +71,10 @@ optim_wrapper = dict(
     )
 
 val_evaluator = dict(
-  type="CSO_Metrics"
+  type="CSO_mAP"
 )
 test_evaluator = dict(
-  type="CSO_Metrics"
+  type="CSO_mAP"
 )
 
 # default_hooks = dict(

@@ -10,7 +10,7 @@ from mmengine.registry import METRICS
 from grokcso.evaluation.functional.mean_mAP import eval_map
 
 @METRICS.register_module()
-class CSO_Metrics(BaseMetric):
+class CSO_mAP(BaseMetric):
 
     default_prefix: Optional[str] = 'cso_metric'
 
