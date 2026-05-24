@@ -77,7 +77,7 @@ A synthetic dataset for multi-target sub-pixel resolution analysis under diffrac
 | Intensity Range     | 220–250 units (uniform)  |
 | Spatial Constraints | Sub-pixel coordinates within a pixel + 0.52 Rayleigh unit separation |
 ### SeqCSIST Dataset
-A synthetic dataset specifically designed for multi-frame CSIST Umixing[100,000 frames organized into 5,000 random trajectories]. Download: 
+A synthetic dataset specifically designed for multi-frame CSIST Unmixing, consisting of 100,000 frames organized into 5,000 random trajectories. Download: 
 [Baidu Pan](https://pan.baidu.com/s/1_sxGh5oFQ8-3RpUUeMN2Mg?pwd=kxe9)
 
 
