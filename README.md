@@ -65,7 +65,7 @@ An open-source ecosystem for the unmixing of closely-spaced infrared small targe
 - **GrokCSO**, an open-source toolkit featuring DISTA-Net and other models.
 ---
 
-## Datasets
+## 🗂 Datasets
 ### CSIST-100K Dataset
 A synthetic dataset for multi-target sub-pixel resolution analysis under diffraction-limited conditions. Download: [Baidu Pan](https://pan.baidu.com/s/1nuedV5Okng8rgFWKy_sMoA?pwd=Grok) / [OneDrive](https://1drv.ms/f/c/698f69b8b2172561/EnQbsEb_rXpJlsNXinWyBbsBkhCsnSPM7UEgtczt7FDjmQ).
 
@@ -81,7 +81,7 @@ A synthetic dataset specifically designed for multi-frame CSIST Umixing[100,000 
 [Baidu Pan](https://pan.baidu.com/s/1_sxGh5oFQ8-3RpUUeMN2Mg?pwd=kxe9)
 
 
-## Networks
+## 🏗 Networks
 ![net1](./pictures/dista-net.png)
 ---
 Architecture of the proposed DISTA-Net. The overall framework consists of multiple cascaded stages. Each stage contains three main components: a dual-branch dynamic transform module ($\mathcal{F}^{(k)}$) for feature extraction, a dynamic threshold module ($\Theta^{(k)}$) for feature refinement, and an inverse transform module ($\tilde{\mathcal{F}}^{(k)}$) for reconstruction.
@@ -90,7 +90,7 @@ Architecture of the proposed DISTA-Net. The overall framework consists of multip
 ---
 Architecture of the proposed DeRefNet. The overall framework consists of three main modules: a sparsity-driven feature extraction module for effective CSIST feature extraction through nonlinear learnable and sparsifying transforms, a positional encoding module for temporal information enhancement to enable finer sub-pixel target localization, and a temporal deformable feature alignment (TDFA) module for dynamic reference-based refinement through multi-frame deformable alignment at the feature level.
 
-## Comparison with state-of-the-art methods
+## 📈 Comparison with state-of-the-art methods
 ![compare1](./pictures/compare_dista.png)
 ---
 ![compare2](./pictures/compare_seq.png)
