@@ -10,7 +10,9 @@ from mmengine.registry import RUNNERS
 from mmengine.runner import Runner
 
 from mmdet.utils import setup_cache_size_limit_of_dynamo
-
+# import sys
+# sys.path.append(os.getcwd())
+# sys.path.insert(0, os.path.dirname(__file__))
 from grokcso.datasets import *
 from grokcso.models import *
 from grokcso.evaluation import *

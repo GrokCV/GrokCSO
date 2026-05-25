@@ -13,7 +13,10 @@ from mmdet.engine.hooks.utils import trigger_visualization_hook
 from mmdet.evaluation import DumpDetResults
 from mmdet.registry import RUNNERS
 from mmdet.utils import setup_cache_size_limit_of_dynamo
+# import sys
 
+# sys.path.append(os.getcwd())
+# print(os.getcwd())
 from grokcso.datasets import *
 from grokcso.models import *
 from grokcso.evaluation import *

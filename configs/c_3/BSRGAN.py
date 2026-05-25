@@ -1,7 +1,5 @@
 _base_ = '../_base_/datasets/DeRefNet.py'
 
-
-
 env_cfg = dict(
     cudnn_benchmark=True
 )

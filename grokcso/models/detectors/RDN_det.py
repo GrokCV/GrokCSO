@@ -10,12 +10,12 @@ from grokcso.models.backbones.RDN_bb import RDN_bb, MSEloss
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 @MODELS.register_module()
-class RDN(BaseModel):
+class RDN_det(BaseModel):
 
     def __init__(self
                  ):
 
-        super(RDN, self).__init__()
+        super(RDN_det, self).__init__()
 
         self.RDN = RDN_bb(in_channels=1, out_channels=1, num_features=64, num_blocks=16, num_layers=8, upscale_factor = 3)
 

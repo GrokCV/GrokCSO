@@ -10,7 +10,7 @@ from .GMFN_det import GMFNNet
 from .USRNet_det import USRNet
 from .DBPN_det import DBPN
 from .ESPCN_det import ESPCN
-from .RDN_det import RDN
+from .RDN_det import RDN_det
 from .TiLISTA_det import TiLISTA
 from .SRGAN_det import SRGAN_gai
 from .optim import MultiOptimWrapperConstructor
@@ -20,9 +20,6 @@ from .vgg import ModifiedVGG
 from .ESRGAN_det import ESRGAN
 from .BSRGAN_det import BSRGAN
 from .UNet import Discriminator_UNet
-from .LISTA_det import LISTA
-from .LIHT_det import LIHT
-from .LAMP_det import LAMP
 from .RPCANet_det import RPCANet
 
 __all__ = [
@@ -38,7 +35,7 @@ __all__ = [
            'USRNet',
            'DBPN',
            'ESPCN',
-           'RDN',
+           'RDN_det',
            'TiLISTA',
            'SRGAN_gai',
            'MultiOptimWrapperConstructor',
@@ -48,8 +45,5 @@ __all__ = [
            'ESRGAN',
            'BSRGAN',
            'Discriminator_UNet',
-           'LISTA',
-           'LIHT',
-           'LAMP',
            'RPCANet',
            ]
