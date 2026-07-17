@@ -24,7 +24,7 @@
   </tr>
 </table>
 
-![intro](./pictures/unmixing.png)
+![intro](./pictures/DISTANet/unmixing.png)
 
 This repository contains the official implementation of the following papers:
 
