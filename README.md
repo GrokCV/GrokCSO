@@ -82,19 +82,24 @@ A synthetic dataset specifically designed for multi-frame CSIST Unmixing, consis
 
 
 ## 🏗 Networks
-![net1](./pictures/dista-net.png)
+![net1](./pictures/DISTANet/dista-net.png)
 ---
 Architecture of the proposed DISTA-Net. The overall framework consists of multiple cascaded stages. Each stage contains three main components: a dual-branch dynamic transform module ($\mathcal{F}^{(k)}$) for feature extraction, a dynamic threshold module ($\Theta^{(k)}$) for feature refinement, and an inverse transform module ($\tilde{\mathcal{F}}^{(k)}$) for reconstruction.
 
-![net2](./pictures/DeRefNet.png)
+![net2](./pictures/SeqCSIST/DeRefNet.png)
+---
+Architecture of the proposed DeRefNet. The overall framework consists of three main modules: a sparsity-driven feature extraction module for effective CSIST feature extraction through nonlinear learnable and sparsifying transforms, a positional encoding module for temporal information enhancement to enable finer sub-pixel target localization, and a temporal deformable feature alignment (TDFA) module for dynamic reference-based refinement through multi-frame deformable alignment at the feature level.
+
+![net3](./pictures/FOCUS/FOCUS.png)
 ---
 Architecture of the proposed DeRefNet. The overall framework consists of three main modules: a sparsity-driven feature extraction module for effective CSIST feature extraction through nonlinear learnable and sparsifying transforms, a positional encoding module for temporal information enhancement to enable finer sub-pixel target localization, and a temporal deformable feature alignment (TDFA) module for dynamic reference-based refinement through multi-frame deformable alignment at the feature level.
 
 ## 📈 Comparison with state-of-the-art methods
-![compare1](./pictures/compare_dista.png)
+![compare1](./pictures/DISTANet/compare_dista.png)
 ---
-![compare2](./pictures/compare_seq.png)
-
+![compare2](./pictures/SeqCSIST/compare_seq.png)
+---
+![compare3](./pictures/FOCUS/compare_focus.png)
 
 
 ## 📘GrokCSO Instructions
