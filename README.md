@@ -92,7 +92,7 @@ Architecture of the proposed DeRefNet. The overall framework consists of three m
 
 ![net3](./pictures/FOCUS/FOCUS.png)
 ---
-Architecture of the proposed DeRefNet. The overall framework consists of three main modules: a sparsity-driven feature extraction module for effective CSIST feature extraction through nonlinear learnable and sparsifying transforms, a positional encoding module for temporal information enhancement to enable finer sub-pixel target localization, and a temporal deformable feature alignment (TDFA) module for dynamic reference-based refinement through multi-frame deformable alignment at the feature level.
+Architecture of the proposed FOCUS. The overall framework consists of 
 
 ## 📈 Comparison with state-of-the-art methods
 ![compare1](./pictures/DISTANet/compare_dista.png)
