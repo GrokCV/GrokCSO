@@ -92,7 +92,7 @@ Architecture of the proposed DeRefNet. The overall framework consists of three m
 
 ![net3](./pictures/FOCUS/FOCUS.png)
 ---
-Architecture of the proposed FOCUS. The overall framework consists of 
+Overview of the FOCUS framework and its physics-constrained optimization strategy. (a-b) The architecture utilizes a coarse-to-fine flow via DMM and SMM modules, incorporating Isomorphic Source-Generation Units (ISGU) that bifurcate intensity and mask paths to ensure discrete source recovery. (c-e) Comparison of label characteristics and predictive evolution between standard super-resolution (SR) and the proposed unmixing paradigm. The evolution under joint L<sub>MSE</sub>, L<sub>Sparsity</sub>, and L<sub>Energy</sub> constraints, visualized through the optimization vectorgraph, illustrates the competitive equilibrium achieved to maintain structural sparsity and flux conservation for high-fidelity signal reconstruction.
 
 ## 📈 Comparison with state-of-the-art methods
 ![compare1](./pictures/DISTANet/compare_dista.png)
