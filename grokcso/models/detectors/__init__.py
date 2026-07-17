@@ -1,4 +1,5 @@
 from .DeRefNet_det import DeRefNet
+from .FOCUS_det import FOCUS
 from .istanet_det import ISTANet
 from .fistanet_det import FISTANet
 from .istanet_plus_det import ISTANetplus
@@ -24,6 +25,7 @@ from .RPCANet_det import RPCANet
 
 __all__ = [
            'DeRefNet',
+           'FOCUS',
            'ISTANet',
            'FISTANet',
            'ISTANetplus',

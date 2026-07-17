@@ -55,6 +55,17 @@ This repository contains the official implementation of the following papers:
 >[博客解读](https://yimian.grokcv.ai/blog/seqcsist/) |
 >[视频讲解](https://www.bilibili.com/video/BV1bbedz6E5b)
 
+> Beyond Unfolding: 60× Faster One-Stage Unmixing for Closely-Spaced Infrared Small Targets<br/>
+> Ximeng Zhai,
+> Zheng Wang,
+> Zhu Liu,
+> Yaohong Chen,
+> Hao Wang,
+> Kehua Guo,
+> Ming-Ming Cheng
+> Yimian Dai<br/>
+> arXiv.
+>[Paper Link](https://arxiv.org/pdf/)
 
 ## 📘 Introduction
 An open-source ecosystem for the unmixing of closely-spaced infrared small targets including:
