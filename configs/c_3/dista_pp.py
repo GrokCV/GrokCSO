@@ -29,14 +29,12 @@ test_evaluator = [
     type="CSO_Metrics",
     brightness_threshold=50,
     c=3,
-    count_threshold=True,
-    nms=True,
+    postprocess=True,
     ),
   dict(
     type="Similarity",
     c=3,
     brightness_threshold=50,
-    count_threshold=True,
-    nms=True
+    postprocess=True,
   )
 ]
