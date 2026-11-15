@@ -265,14 +265,14 @@ $ CUDA_VISIBLE_DEVICES=1 python tools/test.py --config configs/c_7/dista.py --ch
 }
 
 @article{zhai2026beyond,
-  title={Beyond Unfolding: 60x Faster One-Stage Unmixing for Closely-Spaced Infrared Small Targets},
+  title={{Beyond Unfolding}: 60x Faster One-Stage Unmixing for Closely-Spaced Infrared Small Targets},
   author={Zhai, Ximeng and Wang, Zheng and Chen, Yaohong and Wang, Hao and Cheng, Ming-Ming and Dai, Yimian},
   journal={arXiv preprint arXiv:2607.16007},
   year={2026}
 }
 
 @article{xu2026dista,
-  title={DISTA-Net++: Rethinking Infrared Small Target Unmixing Beyond Sub-Pixel Separation},
+  title={{DISTA-Net++}: Rethinking Infrared Small Target Unmixing Beyond Sub-Pixel Separation},
   author={Xu, Mengze and Liu, Zhu and Sheng, Weidong and Li, Boyang and Dai, Yimian and Cheng, Ming-Ming and Yang, Jian},
   journal={arXiv preprint arXiv:2609.18773},
   year={2026}
