@@ -111,7 +111,7 @@ Architecture of the proposed DISTA-Net. The overall framework consists of multip
 
 ![net2](./pictures/DISTA-Net++/DISTA-Net++.png)
 ---
-Architecture of the proposed DISTA-Net. The overall framework consists of multiple cascaded stages. Each stage contains three main components: a dual-branch dynamic transform module ($\mathcal{F}^{(k)}$) for feature extraction, a dynamic threshold module ($\Theta^{(k)}$) for feature refinement, and an inverse transform module ($\tilde{\mathcal{F}}^{(k)}$) for reconstruction.
+Architecture of the proposed DISTA-Net++. The overall framework consists of three main components: a dynamic deep unfolding backbone inherited from DISTA-Net, a count-guided prior module that uses global target-count information to modulate features and reduce ambiguity among overlapping targets, and a continuous coordinate rectification mechanism that predicts sub-pixel offsets to refine discrete grid estimates into continuous spatial coordinates.
 
 ![net3](./pictures/SeqCSIST/DeRefNet.png)
 ---
