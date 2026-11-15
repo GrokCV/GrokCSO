@@ -62,7 +62,7 @@ This repository contains the official implementation of the following papers:
 > Yaohong Chen,
 > Hao Wang,
 > Kehua Guo,
-> Ming-Ming Cheng
+> Ming-Ming Cheng,
 > Yimian Dai<br/>
 > arXiv.
 >[Paper Link](https://arxiv.org/pdf/2607.16007)
