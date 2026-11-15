@@ -20,14 +20,14 @@ def format_sig4(x):
 
 @METRICS.register_module()
 class Similarity(BaseMetric):
+
     default_prefix: Optional[str] = 'cso_metric'
 
     def __init__(self,
                  c=3,
                  brightness_threshold: float = 50,
-                 nms: bool = False,
+                 postprocess: bool = False,
                  nms_threshold: float = 0.4,
-                 count_threshold: bool = False,
                  use_loc_sort: bool = False,
                  local_patch_size: int = 3,
                  collect_device: str = 'cpu',
@@ -35,9 +35,8 @@ class Similarity(BaseMetric):
         super().__init__(collect_device=collect_device, prefix=prefix)
         self.c = c
         self.brightness_threshold = brightness_threshold
-        self.nms = nms
+        self.postprocess = postprocess
         self.nms_threshold = nms_threshold
-        self.count_threshold = count_threshold
         self.use_loc_sort = use_loc_sort
         self.local_patch_size = local_patch_size
         self._local_patch_upsampled = int(local_patch_size * c)
@@ -129,7 +128,7 @@ class Similarity(BaseMetric):
         use_offset = 'offset_pred' in output and output['offset_pred'] is not None
         offset_pred = output['offset_pred'].cpu().numpy() if use_offset else None
 
-        if self.count_threshold:
+        if self.postprocess:
             count_list = torch.argmax(output['x_num'], dim=1) + 1
 
         x_output_copy = x_output.copy()
@@ -138,11 +137,9 @@ class Similarity(BaseMetric):
         for idx in range(x_output.shape[0]):
             gt_img = ann_list[idx].reshape(11 * self.c, 11 * self.c)
 
-            if not (self.nms or self.count_threshold):
-
+            if not self.postprocess:
                 pred_img = x_output[idx].reshape(11 * self.c, 11 * self.c)
             else:
-
                 dets = []
                 raw_pred = x_output_copy[idx]
 
@@ -189,13 +186,10 @@ class Similarity(BaseMetric):
 
                 dets = sorted(dets, key=lambda x: x[3], reverse=True)
 
-                if self.nms:
-                    dets = self._apply_nms(dets)
-
-                if self.count_threshold:
-                    count_val = int(count_list[idx])
-                    if len(dets) > count_val:
-                        dets = dets[:count_val]
+                dets = self._apply_nms(dets)
+                count_val = int(count_list[idx])
+                if len(dets) > count_val:
+                    dets = dets[:count_val]
 
                 shape = (11 * self.c, 11 * self.c)
                 pred_img = self._reconstruct_image_from_dets(dets, shape)

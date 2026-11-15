@@ -25,14 +25,14 @@ def format_sig4(x):
 
 @METRICS.register_module()
 class CSO_Metrics(BaseMetric):
+
     default_prefix: Optional[str] = 'cso_metric'
 
     def __init__(self,
                  distance_thrs=(0.05, 0.1, 0.15, 0.2, 0.25),
                  brightness_threshold: float = 50,
                  c=3,
-                 count_threshold: bool = False,
-                 nms: bool = False,
+                 postprocess: bool = False,
                  nms_threshold: float = 0.4,
                  pd: bool = False,
                  collect_device: str = 'cpu',
@@ -42,8 +42,7 @@ class CSO_Metrics(BaseMetric):
         self.distance_thrs = list(distance_thrs)
         self.brightness_threshold = brightness_threshold
         self.c = c
-        self.count_threshold = count_threshold
-        self.nms = nms
+        self.postprocess = postprocess
         self.nms_threshold = nms_threshold
         self.pd = pd
         self.use_loc_sort = use_loc_sort
@@ -53,7 +52,7 @@ class CSO_Metrics(BaseMetric):
         x_output = output['x_final'].cpu().numpy()
         ann_list = output['targets_GT']
 
-        if self.count_threshold:
+        if self.postprocess:
             if output.get('x_num') is not None:
                 count_logits = output['x_num']
                 if isinstance(count_logits, torch.Tensor):
@@ -101,7 +100,7 @@ class CSO_Metrics(BaseMetric):
 
             dets = sorted(dets, key=lambda x: x[3], reverse=True)
 
-            if self.nms:
+            if self.postprocess:
                 dets_tmp = np.array([[d[0], d[1], d[2]] for d in dets])
                 best_dets = []
                 while len(dets_tmp) > 0:
@@ -114,12 +113,10 @@ class CSO_Metrics(BaseMetric):
                     dets_tmp = np.delete(dets_tmp, 0, axis=0)
                 dets = best_dets
 
-            if self.count_threshold:
                 count_val = int(count_list[idx])
                 if len(dets) > count_val:
                     dets = dets[:count_val]
 
-            if self.nms:
                 final_dets = dets
             else:
                 final_dets = [[d[0], d[1], d[2]] for d in dets]
