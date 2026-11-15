@@ -105,29 +105,88 @@ A synthetic dataset specifically designed for multi-frame CSIST Unmixing, consis
 
 
 ## 🏗 Networks
+
+### DISTA-Net
+
+<details>
+<summary>📐 View Architecture and Description</summary>
+
 ![net1](./pictures/DISTA-Net/dista-net.png)
----
+
 Architecture of the proposed DISTA-Net. The overall framework consists of multiple cascaded stages. Each stage contains three main components: a dual-branch dynamic transform module ($\mathcal{F}^{(k)}$) for feature extraction, a dynamic threshold module ($\Theta^{(k)}$) for feature refinement, and an inverse transform module ($\tilde{\mathcal{F}}^{(k)}$) for reconstruction.
 
-![net2](./pictures/DISTA-Net++/DISTA-Net++.png)
+</details>
+
 ---
+
+### DISTA-Net++
+
+<details>
+<summary>📐 View Architecture and Description</summary>
+
+![net2](./pictures/DISTA-Net++/DISTA-Net++.png)
+
 Architecture of the proposed DISTA-Net++. The overall framework consists of three main components: a dynamic deep unfolding backbone inherited from DISTA-Net, a count-guided prior module that uses global target-count information to modulate features and reduce ambiguity among overlapping targets, and a continuous coordinate rectification mechanism that predicts sub-pixel offsets to refine discrete grid estimates into continuous spatial coordinates.
 
-![net3](./pictures/SeqCSIST/DeRefNet.png)
+</details>
+
 ---
+
+### DeRefNet (SeqCSIST)
+
+<details>
+<summary>📐 View Architecture and Description</summary>
+
+![net3](./pictures/SeqCSIST/DeRefNet.png)
+
 Architecture of the proposed DeRefNet. The overall framework consists of three main modules: a sparsity-driven feature extraction module for effective CSIST feature extraction through nonlinear learnable and sparsifying transforms, a positional encoding module for temporal information enhancement to enable finer sub-pixel target localization, and a temporal deformable feature alignment (TDFA) module for dynamic reference-based refinement through multi-frame deformable alignment at the feature level.
 
-![net4](./pictures/FOCUS/FOCUS.png)
+</details>
+
 ---
+
+### FOCUS
+
+<details>
+<summary>📐 View Architecture and Description</summary>
+
+![net4](./pictures/FOCUS/FOCUS.png)
+
 Overview of the FOCUS framework and its physics-constrained optimization strategy. (a-b) The architecture utilizes a coarse-to-fine flow via DMM and SMM modules, incorporating Isomorphic Source-Generation Units (ISGU) that bifurcate intensity and mask paths to ensure discrete source recovery. (c-e) Comparison of label characteristics and predictive evolution between standard super-resolution (SR) and the proposed unmixing paradigm. The evolution under joint L<sub>MSE</sub>, L<sub>Sparsity</sub>, and L<sub>Energy</sub> constraints, visualized through the optimization vectorgraph, illustrates the competitive equilibrium achieved to maintain structural sparsity and flux conservation for high-fidelity signal reconstruction.
 
-## 📈 Comparison with state-of-the-art methods
-![compare1](./pictures/DISTANet/compare_dista.png)
----
-![compare2](./pictures/SeqCSIST/compare_seq.png)
----
-![compare3](./pictures/FOCUS/compare_focus.png)
+</details>
 
+---
+
+## 📈 Comparison with state-of-the-art methods
+
+<details>
+<summary>📊 DISTA-Net — Performance Comparison</summary>
+
+![compare1](./pictures/DISTA-Net/compare_dista.png)
+
+</details>
+
+<details>
+<summary>📊 DISTA-Net++ — Performance Comparison</summary>
+
+![compare2](./pictures/DISTA-Net++/compare_distapp.png)
+
+</details>
+
+<details>
+<summary>📊 SeqCSIST — Performance Comparison</summary>
+
+![compare3](./pictures/SeqCSIST/compare_seq.png)
+
+</details>
+
+<details>
+<summary>📊 FOCUS — Performance Comparison</summary>
+
+![compare4](./pictures/FOCUS/compare_focus.png)
+
+</details>
 
 ## 📘GrokCSO Instructions
 
