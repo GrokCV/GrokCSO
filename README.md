@@ -105,11 +105,11 @@ A synthetic dataset specifically designed for multi-frame CSIST Unmixing, consis
 
 
 ## 🏗 Networks
-![net1](./pictures/DISTANet/dista-net.png)
+![net1](./pictures/DISTA-Net/dista-net.png)
 ---
 Architecture of the proposed DISTA-Net. The overall framework consists of multiple cascaded stages. Each stage contains three main components: a dual-branch dynamic transform module ($\mathcal{F}^{(k)}$) for feature extraction, a dynamic threshold module ($\Theta^{(k)}$) for feature refinement, and an inverse transform module ($\tilde{\mathcal{F}}^{(k)}$) for reconstruction.
 
-![net2](./pictures/)
+![net2](./pictures/DISTA-Net++/DISTA-Net++.png)
 ---
 Architecture of the proposed DISTA-Net. The overall framework consists of multiple cascaded stages. Each stage contains three main components: a dual-branch dynamic transform module ($\mathcal{F}^{(k)}$) for feature extraction, a dynamic threshold module ($\Theta^{(k)}$) for feature refinement, and an inverse transform module ($\tilde{\mathcal{F}}^{(k)}$) for reconstruction.
 
