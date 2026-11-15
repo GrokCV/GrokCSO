@@ -65,7 +65,19 @@ This repository contains the official implementation of the following papers:
 > Ming-Ming Cheng
 > Yimian Dai<br/>
 > arXiv.
->[Paper Link](https://arxiv.org/pdf/)
+>[Paper Link](https://arxiv.org/pdf/2607.16007)
+
+> DISTA-Net++: Rethinking Infrared Small Target Unmixing Beyond Sub-Pixel Separation<br/>
+> Mengze Xu,
+> Zhu Liu,
+> Weidong Sheng,
+> Boyang Li,
+> Yimian Dai,
+> Ming-Ming Cheng,
+> Jian Yang<br/>
+> arXiv.
+> [Paper Link](https://arxiv.org/pdf/2609.18773)
+
 
 ## 📘 Introduction
 An open-source ecosystem for the unmixing of closely-spaced infrared small targets including:
