@@ -19,6 +19,7 @@ from .LAMP import LAMP
 from .LISTA import LISTA
 from .TiLISTA import TiLISTA
 from .dista import DISTA
+from .dista_pp import DISTA_pp
 
 __all__ = [
   'FDFrameWork',
