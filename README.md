@@ -109,11 +109,15 @@ A synthetic dataset specifically designed for multi-frame CSIST Unmixing, consis
 ---
 Architecture of the proposed DISTA-Net. The overall framework consists of multiple cascaded stages. Each stage contains three main components: a dual-branch dynamic transform module ($\mathcal{F}^{(k)}$) for feature extraction, a dynamic threshold module ($\Theta^{(k)}$) for feature refinement, and an inverse transform module ($\tilde{\mathcal{F}}^{(k)}$) for reconstruction.
 
-![net2](./pictures/SeqCSIST/DeRefNet.png)
+![net2](./pictures/)
+---
+Architecture of the proposed DISTA-Net. The overall framework consists of multiple cascaded stages. Each stage contains three main components: a dual-branch dynamic transform module ($\mathcal{F}^{(k)}$) for feature extraction, a dynamic threshold module ($\Theta^{(k)}$) for feature refinement, and an inverse transform module ($\tilde{\mathcal{F}}^{(k)}$) for reconstruction.
+
+![net3](./pictures/SeqCSIST/DeRefNet.png)
 ---
 Architecture of the proposed DeRefNet. The overall framework consists of three main modules: a sparsity-driven feature extraction module for effective CSIST feature extraction through nonlinear learnable and sparsifying transforms, a positional encoding module for temporal information enhancement to enable finer sub-pixel target localization, and a temporal deformable feature alignment (TDFA) module for dynamic reference-based refinement through multi-frame deformable alignment at the feature level.
 
-![net3](./pictures/FOCUS/FOCUS.png)
+![net4](./pictures/FOCUS/FOCUS.png)
 ---
 Overview of the FOCUS framework and its physics-constrained optimization strategy. (a-b) The architecture utilizes a coarse-to-fine flow via DMM and SMM modules, incorporating Isomorphic Source-Generation Units (ISGU) that bifurcate intensity and mask paths to ensure discrete source recovery. (c-e) Comparison of label characteristics and predictive evolution between standard super-resolution (SR) and the proposed unmixing paradigm. The evolution under joint L<sub>MSE</sub>, L<sub>Sparsity</sub>, and L<sub>Energy</sub> constraints, visualized through the optimization vectorgraph, illustrates the competitive equilibrium achieved to maintain structural sparsity and flux conservation for high-fidelity signal reconstruction.
 
@@ -161,7 +165,7 @@ $ python setup.py develop
 
 ```
 # c = 3  
-$ CUDA_VISIBLE_DEVICES=1 python tools/train.py --config configs/Agrok/dista.py  
+$ CUDA_VISIBLE_DEVICES=1 python tools/train.py --config configs/c_3/dista.py  
   
 # c = 5  
 $ CUDA_VISIBLE_DEVICES=1 python tools/train.py --config configs/c_5/dista.py  
@@ -199,6 +203,20 @@ $ CUDA_VISIBLE_DEVICES=1 python tools/test.py --config configs/c_7/dista.py --ch
   journal={IEEE Transactions on Geoscience and Remote Sensing},
   year={2025},
   publisher={IEEE}
+}
+
+@article{zhai2026beyond,
+  title={Beyond Unfolding: 60x Faster One-Stage Unmixing for Closely-Spaced Infrared Small Targets},
+  author={Zhai, Ximeng and Wang, Zheng and Chen, Yaohong and Wang, Hao and Cheng, Ming-Ming and Dai, Yimian},
+  journal={arXiv preprint arXiv:2607.16007},
+  year={2026}
+}
+
+@article{xu2026dista,
+  title={DISTA-Net++: Rethinking Infrared Small Target Unmixing Beyond Sub-Pixel Separation},
+  author={Xu, Mengze and Liu, Zhu and Sheng, Weidong and Li, Boyang and Dai, Yimian and Cheng, Ming-Ming and Yang, Jian},
+  journal={arXiv preprint arXiv:2609.18773},
+  year={2026}
 }
 ```
 
