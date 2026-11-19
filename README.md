@@ -88,6 +88,25 @@ An open-source ecosystem for the unmixing of closely-spaced infrared small targe
 - **GrokCSO**, an open-source toolkit featuring DISTA-Net and other models.
 ---
 
+## 📂 Repository Structure
+
+The repository is organized as follows:
+
+```text
+GrokCSO/
+├── configs/        # Configuration files for model training and evaluation
+├── experiments/    # Experimental outputs, including training/testing logs and model checkpoints
+├── grokcso/        # Core implementation of the GrokCSO toolkit
+├── pictures/       # Figures and visual assets used in the documentation
+├── requirements/   # Environment and dependency requirement files
+├── tools/          # Training and testing scripts
+├── .gitignore
+├── CITATION.cff
+├── LICENSE
+├── README.md
+└── setup.py
+```
+
 ## 🗂 Datasets
 ### CSIST-100K Dataset
 A synthetic dataset for multi-target sub-pixel resolution analysis under diffraction-limited conditions. Download: [Baidu Pan](https://pan.baidu.com/s/1nuedV5Okng8rgFWKy_sMoA?pwd=Grok) / [OneDrive](https://1drv.ms/f/c/698f69b8b2172561/EnQbsEb_rXpJlsNXinWyBbsBkhCsnSPM7UEgtczt7FDjmQ).
