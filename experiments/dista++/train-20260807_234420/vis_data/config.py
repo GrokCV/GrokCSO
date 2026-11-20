@@ -9,7 +9,6 @@ default_hooks = dict(
         save_best='cso_metric/mAP',
         type='CheckpointHook'))
 launcher = 'none'
-load_from = '/defaultShare/archive/xumengze/jiehun/MODEL/GrokCSOv2/work_dirs/dista_pp_inioff/best_cso_metric_mAP_epoch_113.pth'
 model = dict(
     LayerNo=6,
     Phi_data_Name=
@@ -27,7 +26,7 @@ model = dict(
     offset_weight=300.0,
     type='DISTA_pp',
     use_count=True,
-    use_dt=False,
+    use_dt=True,
     use_dtg=True,
     use_offset=True)
 optim_wrapper = dict(
@@ -87,4 +86,4 @@ val_evaluator = [
     dict(brightness_threshold=50, c=3, type='CSO_Metrics'),
     dict(c=3, type='Similarity'),
 ]
-work_dir = '/defaultShare/archive/xumengze/jiehun/MODEL/GrokCSOv2/work_dirs/dista_pp_inioff'
+work_dir = 'work_dirs/dista_pp_inioff_dt'

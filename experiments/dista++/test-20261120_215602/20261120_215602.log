@@ -1,15 +1,15 @@
-2026/08/13 18:48:44 - mmengine - INFO - 
+2026/11/20 21:56:03 - mmengine - INFO - 
 ------------------------------------------------------------
 System environment:
     sys.platform: linux
     Python: 3.9.25 (main, Nov  3 2025, 22:33:05) [GCC 11.2.0]
     CUDA available: True
     MUSA available: False
-    numpy_random_seed: 462086402
+    numpy_random_seed: 413718806
     GPU 0: NVIDIA GeForce RTX 3090
     CUDA_HOME: /usr/local/cuda
     NVCC: Cuda compilation tools, release 11.4, V11.4.120
-    GCC: gcc (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0
+    GCC: gcc (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0
     PyTorch: 2.1.2
     PyTorch compiling details: PyTorch built with:
   - GCC 9.3
@@ -32,13 +32,13 @@ System environment:
 
 Runtime environment:
     dist_cfg: {'backend': 'nccl'}
-    seed: 462086402
+    seed: 413718806
     Distributed launcher: none
     Distributed training: False
     GPU number: 1
 ------------------------------------------------------------
 
-2026/08/13 18:48:44 - mmengine - INFO - Config:
+2026/11/20 21:56:03 - mmengine - INFO - Config:
 Phi_data_Name = '/defaultShare/archive/xumengze/GrokCSO/data/sampling_matrix/phi_3.mat'
 Qinit_Name = '/defaultShare/archive/xumengze/GrokCSO/data/initial_matrix/Q_3.mat'
 dataset_type = 'NoiseDataset'
@@ -50,7 +50,7 @@ default_hooks = dict(
         save_best='cso_metric/mAP',
         type='CheckpointHook'))
 launcher = 'none'
-load_from = '/defaultShare/archive/xumengze/jiehun/MODEL/GrokCSOv2/work_dirs/dista_pp_inioff/best_cso_metric_mAP_epoch_113.pth'
+load_from = '/defaultShare/archive/xumengze/jiehun/MODEL/GrokCSOv2/experiment_archive/work_dirs/dista_pp_inioff_dt/best_cso_metric_mAP_epoch_120.pth'
 model = dict(
     LayerNo=6,
     Phi_data_Name=
@@ -68,7 +68,7 @@ model = dict(
     offset_weight=300.0,
     type='DISTA_pp',
     use_count=True,
-    use_dt=False,
+    use_dt=True,
     use_dtg=True,
     use_offset=True)
 optim_wrapper = dict(
@@ -128,10 +128,10 @@ val_evaluator = [
     dict(brightness_threshold=50, c=3, type='CSO_Metrics'),
     dict(c=3, type='Similarity'),
 ]
-work_dir = '/defaultShare/archive/xumengze/jiehun/MODEL/GrokCSOv2/work_dirs/dista_pp_inioff'
+work_dir = 'work_dirs/dista_pp_inioff_dt'
 
-2026/08/13 18:48:49 - mmengine - INFO - Distributed training is not used, all SyncBatchNorm (SyncBN) layers in the model will be automatically reverted to BatchNormXd layers if they are used.
-2026/08/13 18:48:49 - mmengine - INFO - Hooks will be executed in the following order:
+2026/11/20 21:56:04 - mmengine - INFO - Distributed training is not used, all SyncBatchNorm (SyncBN) layers in the model will be automatically reverted to BatchNormXd layers if they are used.
+2026/11/20 21:56:04 - mmengine - INFO - Hooks will be executed in the following order:
 before_run:
 (VERY_HIGH   ) RuntimeInfoHook                    
 (BELOW_NORMAL) LoggerHook                         
@@ -213,64 +213,64 @@ after_test:
 after_run:
 (BELOW_NORMAL) LoggerHook                         
  -------------------- 
-2026/08/13 18:48:50 - mmengine - WARNING - CSO_Noise_Dataset is not a meta file, simply parsed as meta information
-2026/08/13 18:48:50 - mmengine - WARNING - SR is not a meta file, simply parsed as meta information
-2026/08/13 18:48:57 - mmengine - INFO - Load checkpoint from /defaultShare/archive/xumengze/jiehun/MODEL/GrokCSOv2/work_dirs/dista_pp_inioff/best_cso_metric_mAP_epoch_113.pth
-2026/08/13 18:49:25 - mmengine - INFO - Epoch(test) [ 10/156]    eta: 0:06:47  time: 2.7944  data_time: 0.7384  memory: 240  
-2026/08/13 18:49:43 - mmengine - INFO - Epoch(test) [ 20/156]    eta: 0:05:15  time: 1.8394  data_time: 0.0206  memory: 240  
-2026/08/13 18:50:00 - mmengine - INFO - Epoch(test) [ 30/156]    eta: 0:04:26  time: 1.7096  data_time: 0.0012  memory: 240  
-2026/08/13 18:50:19 - mmengine - INFO - Epoch(test) [ 40/156]    eta: 0:03:57  time: 1.8593  data_time: 0.0086  memory: 240  
-2026/08/13 18:50:37 - mmengine - INFO - Epoch(test) [ 50/156]    eta: 0:03:33  time: 1.8503  data_time: 0.0011  memory: 240  
-2026/08/13 18:50:56 - mmengine - INFO - Epoch(test) [ 60/156]    eta: 0:03:10  time: 1.8612  data_time: 0.0010  memory: 240  
-2026/08/13 18:51:12 - mmengine - INFO - Epoch(test) [ 70/156]    eta: 0:02:46  time: 1.6399  data_time: 0.0009  memory: 240  
-2026/08/13 18:51:30 - mmengine - INFO - Epoch(test) [ 80/156]    eta: 0:02:25  time: 1.7795  data_time: 0.0006  memory: 240  
-2026/08/13 18:51:47 - mmengine - INFO - Epoch(test) [ 90/156]    eta: 0:02:04  time: 1.7011  data_time: 0.0009  memory: 240  
-2026/08/13 18:52:07 - mmengine - INFO - Epoch(test) [100/156]    eta: 0:01:46  time: 1.9993  data_time: 0.0079  memory: 240  
-2026/08/13 18:52:25 - mmengine - INFO - Epoch(test) [110/156]    eta: 0:01:27  time: 1.8082  data_time: 0.0008  memory: 240  
-2026/08/13 18:52:43 - mmengine - INFO - Epoch(test) [120/156]    eta: 0:01:07  time: 1.7510  data_time: 0.0007  memory: 240  
-2026/08/13 18:53:02 - mmengine - INFO - Epoch(test) [130/156]    eta: 0:00:48  time: 1.8712  data_time: 0.0140  memory: 240  
-2026/08/13 18:53:20 - mmengine - INFO - Epoch(test) [140/156]    eta: 0:00:30  time: 1.8282  data_time: 0.0007  memory: 240  
-2026/08/13 18:53:35 - mmengine - INFO - Epoch(test) [150/156]    eta: 0:00:11  time: 1.4697  data_time: 0.0075  memory: 240  
-2026/08/13 18:53:44 - mmengine - INFO - 
+2026/11/20 21:56:04 - mmengine - WARNING - CSO_Noise_Dataset is not a meta file, simply parsed as meta information
+2026/11/20 21:56:04 - mmengine - WARNING - SR is not a meta file, simply parsed as meta information
+2026/11/20 21:56:04 - mmengine - INFO - Load checkpoint from /defaultShare/archive/xumengze/jiehun/MODEL/GrokCSOv2/experiment_archive/work_dirs/dista_pp_inioff_dt/best_cso_metric_mAP_epoch_120.pth
+2026/11/20 21:56:10 - mmengine - INFO - Epoch(test) [ 10/156]    eta: 0:01:26  time: 0.5927  data_time: 0.0637  memory: 259  
+2026/11/20 21:56:15 - mmengine - INFO - Epoch(test) [ 20/156]    eta: 0:01:10  time: 0.4509  data_time: 0.0006  memory: 259  
+2026/11/20 21:56:19 - mmengine - INFO - Epoch(test) [ 30/156]    eta: 0:01:03  time: 0.4565  data_time: 0.0005  memory: 259  
+2026/11/20 21:56:24 - mmengine - INFO - Epoch(test) [ 40/156]    eta: 0:00:56  time: 0.4560  data_time: 0.0005  memory: 259  
+2026/11/20 21:56:29 - mmengine - INFO - Epoch(test) [ 50/156]    eta: 0:00:51  time: 0.4595  data_time: 0.0006  memory: 259  
+2026/11/20 21:56:33 - mmengine - INFO - Epoch(test) [ 60/156]    eta: 0:00:45  time: 0.4494  data_time: 0.0006  memory: 259  
+2026/11/20 21:56:38 - mmengine - INFO - Epoch(test) [ 70/156]    eta: 0:00:41  time: 0.4812  data_time: 0.0006  memory: 259  
+2026/11/20 21:56:42 - mmengine - INFO - Epoch(test) [ 80/156]    eta: 0:00:35  time: 0.4282  data_time: 0.0006  memory: 259  
+2026/11/20 21:56:47 - mmengine - INFO - Epoch(test) [ 90/156]    eta: 0:00:30  time: 0.4517  data_time: 0.0006  memory: 259  
+2026/11/20 21:56:51 - mmengine - INFO - Epoch(test) [100/156]    eta: 0:00:26  time: 0.4555  data_time: 0.0006  memory: 259  
+2026/11/20 21:56:56 - mmengine - INFO - Epoch(test) [110/156]    eta: 0:00:21  time: 0.4578  data_time: 0.0008  memory: 259  
+2026/11/20 21:57:00 - mmengine - INFO - Epoch(test) [120/156]    eta: 0:00:16  time: 0.4487  data_time: 0.0010  memory: 259  
+2026/11/20 21:57:05 - mmengine - INFO - Epoch(test) [130/156]    eta: 0:00:12  time: 0.4551  data_time: 0.0009  memory: 259  
+2026/11/20 21:57:09 - mmengine - INFO - Epoch(test) [140/156]    eta: 0:00:07  time: 0.4558  data_time: 0.0007  memory: 259  
+2026/11/20 21:57:14 - mmengine - INFO - Epoch(test) [150/156]    eta: 0:00:02  time: 0.4571  data_time: 0.0006  memory: 259  
+2026/11/20 21:57:17 - mmengine - INFO - 
 +-------+-------+-------+--------+------------+-------+
 | class | gts   | dets  | recall | precisions | ap    |
 +-------+-------+-------+--------+------------+-------+
-| 0     | 30008 | 30178 | 0.748  | 0.744      | 0.657 |
+| 0     | 30008 | 29989 | 0.749  | 0.750      | 0.656 |
 +-------+-------+-------+--------+------------+-------+
-| AP    |       |       |        |            | 0.657 |
+| AP    |       |       |        |            | 0.656 |
 +-------+-------+-------+--------+------------+-------+
-2026/08/13 18:53:47 - mmengine - INFO - 
-+-------+-------+-------+--------+------------+-------+
-| class | gts   | dets  | recall | precisions | ap    |
-+-------+-------+-------+--------+------------+-------+
-| 0     | 30008 | 30178 | 0.887  | 0.882      | 0.857 |
-+-------+-------+-------+--------+------------+-------+
-| AP    |       |       |        |            | 0.857 |
-+-------+-------+-------+--------+------------+-------+
-2026/08/13 18:53:49 - mmengine - INFO - 
+2026/11/20 21:57:18 - mmengine - INFO - 
 +-------+-------+-------+--------+------------+-------+
 | class | gts   | dets  | recall | precisions | ap    |
 +-------+-------+-------+--------+------------+-------+
-| 0     | 30008 | 30178 | 0.939  | 0.934      | 0.927 |
+| 0     | 30008 | 29989 | 0.888  | 0.889      | 0.858 |
++-------+-------+-------+--------+------------+-------+
+| AP    |       |       |        |            | 0.858 |
++-------+-------+-------+--------+------------+-------+
+2026/11/20 21:57:19 - mmengine - INFO - 
++-------+-------+-------+--------+------------+-------+
+| class | gts   | dets  | recall | precisions | ap    |
++-------+-------+-------+--------+------------+-------+
+| 0     | 30008 | 29989 | 0.940  | 0.940      | 0.927 |
 +-------+-------+-------+--------+------------+-------+
 | AP    |       |       |        |            | 0.927 |
 +-------+-------+-------+--------+------------+-------+
-2026/08/13 18:53:51 - mmengine - INFO - 
+2026/11/20 21:57:19 - mmengine - INFO - 
 +-------+-------+-------+--------+------------+-------+
 | class | gts   | dets  | recall | precisions | ap    |
 +-------+-------+-------+--------+------------+-------+
-| 0     | 30008 | 30178 | 0.965  | 0.959      | 0.959 |
+| 0     | 30008 | 29989 | 0.964  | 0.964      | 0.958 |
 +-------+-------+-------+--------+------------+-------+
-| AP    |       |       |        |            | 0.959 |
+| AP    |       |       |        |            | 0.958 |
 +-------+-------+-------+--------+------------+-------+
-2026/08/13 18:53:52 - mmengine - INFO - 
+2026/11/20 21:57:20 - mmengine - INFO - 
 +-------+-------+-------+--------+------------+-------+
 | class | gts   | dets  | recall | precisions | ap    |
 +-------+-------+-------+--------+------------+-------+
-| 0     | 30008 | 30178 | 0.979  | 0.973      | 0.976 |
+| 0     | 30008 | 29989 | 0.978  | 0.978      | 0.975 |
 +-------+-------+-------+--------+------------+-------+
-| AP    |       |       |        |            | 0.976 |
+| AP    |       |       |        |            | 0.975 |
 +-------+-------+-------+--------+------------+-------+
-2026/08/13 18:53:53 - mmengine - INFO - Final Eval Results: OrderedDict([('mAP', 87.5), ('AP05', 65.67), ('TPPos_RMSE05', 0.02411), ('AP10', 85.68), ('TPPos_RMSE10', 0.03583), ('AP15', 92.73), ('TPPos_RMSE15', 0.04527), ('AP20', 95.88), ('TPPos_RMSE20', 0.05268), ('AP25', 97.57), ('TPPos_RMSE25', 0.05888), ('TPPos_RMSE', 0.04602), ('Count_MAE', 0.02965), ('Count_Acc', 97.12)])
-2026/08/13 18:53:53 - mmengine - INFO - Global | PSNR: 42.7700 | SSIM: 0.9895 | Local(orig=3, up=9) | PSNR: inf | SSIM: 0.8416
-2026/08/13 18:53:53 - mmengine - INFO - Epoch(test) [156/156]    cso_metric/mAP: 87.5000  cso_metric/AP05: 65.6700  cso_metric/TPPos_RMSE05: 0.0241  cso_metric/AP10: 85.6800  cso_metric/TPPos_RMSE10: 0.0358  cso_metric/AP15: 92.7300  cso_metric/TPPos_RMSE15: 0.0453  cso_metric/AP20: 95.8800  cso_metric/TPPos_RMSE20: 0.0527  cso_metric/AP25: 97.5700  cso_metric/TPPos_RMSE25: 0.0589  cso_metric/TPPos_RMSE: 0.0460  cso_metric/Count_MAE: 0.0296  cso_metric/Count_Acc: 97.1200  cso_metric/PSNR: 42.7700  cso_metric/SSIM: 0.9895  cso_metric/Local_PSNR: inf  cso_metric/Local_SSIM: 0.8416  data_time: 0.0517  time: 1.8123
+2026/11/20 21:57:20 - mmengine - INFO - Final Eval Results: OrderedDict([('mAP', 87.48), ('AP05', 65.64), ('TPPos_RMSE05', 0.0239), ('AP10', 85.78), ('TPPos_RMSE10', 0.03583), ('AP15', 92.74), ('TPPos_RMSE15', 0.0451), ('AP20', 95.76), ('TPPos_RMSE20', 0.05224), ('AP25', 97.49), ('TPPos_RMSE25', 0.0583), ('TPPos_RMSE', 0.04569), ('Count_MAE', 0.02354), ('Count_Acc', 97.69)])
+2026/11/20 21:57:20 - mmengine - INFO - Global | PSNR: 41.9400 | SSIM: 0.9896 | Local(orig=3, up=9) | PSNR: inf | SSIM: 0.8414
+2026/11/20 21:57:20 - mmengine - INFO - Epoch(test) [156/156]    cso_metric/mAP: 87.4800  cso_metric/AP05: 65.6400  cso_metric/TPPos_RMSE05: 0.0239  cso_metric/AP10: 85.7800  cso_metric/TPPos_RMSE10: 0.0358  cso_metric/AP15: 92.7400  cso_metric/TPPos_RMSE15: 0.0451  cso_metric/AP20: 95.7600  cso_metric/TPPos_RMSE20: 0.0522  cso_metric/AP25: 97.4900  cso_metric/TPPos_RMSE25: 0.0583  cso_metric/TPPos_RMSE: 0.0457  cso_metric/Count_MAE: 0.0235  cso_metric/Count_Acc: 97.6900  cso_metric/PSNR: 41.9400  cso_metric/SSIM: 0.9896  cso_metric/Local_PSNR: inf  cso_metric/Local_SSIM: 0.8414  data_time: 0.0047  time: 0.4630
