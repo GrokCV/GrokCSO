@@ -16,6 +16,7 @@ model = dict(
     use_offset=True,
     count_inside_dtg=True,
     ini_conv_in_offset=True,
+    num_classes=5, # the range of target number
     
     offset_weight=300.0,
     count_weight=250.0,
